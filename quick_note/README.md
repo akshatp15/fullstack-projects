@@ -1,6 +1,6 @@
 # QuickNote
 ## Project Overiew
-- This project is a note taking app which has the following features: fully resposive design, data storage in a MongoDB database, and rate limiting.
+- This project is a note taking app which has the following features: fully responsive design, data storage in a MongoDB database, and rate limiting.
 - Tech Stack
   - Frontend: React.js and Tailwind CSS
   - Backend: Express.js and MongoDB
