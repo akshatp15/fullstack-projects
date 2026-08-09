@@ -1,12 +1,18 @@
-function PlayerSearch(props){
-  const {players, search, setSearch, setSelectedPlayer} = props
+function PlayerSearch(props) {
+  const {
+    players,
+    search,
+    setSearch,
+    setSelectedPlayer
+  } = props
+
   const filteredPlayers = Object.entries(players).filter(
     ([id, name]) =>
       name.toLowerCase().includes(search.toLowerCase())
   )
 
   return (
-    <div className="relative">
+    <div className="relative w-full">
       <input
         type="text"
         placeholder="Search for a player..."
@@ -16,7 +22,7 @@ function PlayerSearch(props){
       />
 
       {search && (
-        <div className="absolute z-10 mt-2 max-h-64 w-full overflow-y-auto rounded-lg border border-gray-200 bg-white shadow-lg">
+        <div className="absolute left-0 z-10 mt-2 max-h-64 w-full overflow-y-auto rounded-lg border border-gray-200 bg-white shadow-lg">
           {filteredPlayers.length > 0 ? (
             filteredPlayers.map(([id, name]) => (
               <button
@@ -42,4 +48,3 @@ function PlayerSearch(props){
 }
 
 export default PlayerSearch
-

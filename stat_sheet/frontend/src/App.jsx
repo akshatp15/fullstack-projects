@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react'
 import Header from './components/Header.jsx'
 import PlayerSearch from './components/Search.jsx'
+import Table from './components/Table.jsx'
+
 function App() {
   const [players, setPlayers] = useState({}) 
   const [search, setSearch] = useState('') 
@@ -24,13 +26,9 @@ function App() {
 
   return (
     <>
-      <Header />
+      <Header players={players} search={search} setSearch={setSearch} setSelectedPlayer={setSelectedPlayer} />
 
-      <PlayerSearch players={players} search={search} setSearch={setSearch} setSelectedPlayer={setSelectedPlayer} /> 
-
-      <h1>HELLO</h1>
-
-      <p>Players loaded: {selectedPlayer}</p>
+      <Table selectedPlayer={selectedPlayer} name={players[selectedPlayer]} />
     </>
   )
 }

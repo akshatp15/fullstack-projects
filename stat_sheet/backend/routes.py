@@ -1,8 +1,6 @@
 from fastapi import FastAPI
 from nba_api.stats.static import players
-from nba_api.stats.endpoints import playercareerstats
 import functions
-import pandas
 from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI()
