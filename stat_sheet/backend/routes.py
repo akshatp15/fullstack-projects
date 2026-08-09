@@ -3,9 +3,17 @@ from nba_api.stats.static import players
 from nba_api.stats.endpoints import playercareerstats
 import functions
 import pandas
+from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI()
 
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=False,
+    allow_methods=["GET"],
+    allow_headers=["*"],
+)
 @app.get("/")
 def get_players():
     active_players = players.get_active_players()
