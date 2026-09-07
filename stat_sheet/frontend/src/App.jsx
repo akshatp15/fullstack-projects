@@ -1,13 +1,15 @@
 import { useEffect, useState } from 'react'
 import Header from './components/Header.jsx'
-import PlayerSearch from './components/Search.jsx'
+import Search from './components/Search.jsx'
 import Table from './components/Table.jsx'
 
 function App() {
+  // Variables to stores active player list, user search, and user selected player
   const [players, setPlayers] = useState({}) 
   const [search, setSearch] = useState('') 
   const [selectedPlayer, setSelectedPlayer] = useState(null)
 
+  // Function to make API call to backend to get active players
   useEffect(() => {
     const fetchPlayers = async () => {
       try {

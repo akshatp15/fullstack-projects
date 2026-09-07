@@ -1,10 +1,12 @@
 import { useEffect, useState } from 'react'
 
 function Table({ selectedPlayer, name }) {
+  // Variables to store the stats for regular season and playoffs, and the users selection for which stats they want to see, i.e. playoffs or regular
   const [playoffs, setPlayoffs] = useState([])
   const [regular, setRegular] = useState([])
   const [seasonType, setSeasonType] = useState('regular')
 
+  // Function to make API call to get the stats for the selected player
   useEffect(() => {
     const fetchStats = async () => {
       try {
@@ -27,6 +29,7 @@ function Table({ selectedPlayer, name }) {
     }
   }, [selectedPlayer])
 
+  // Variable that contains the selected season's type stats for the player
   const seasonData = (seasonType === 'regular' ? regular : playoffs)
 
   return (
@@ -83,28 +86,28 @@ function Table({ selectedPlayer, name }) {
                 GS
               </th>
               <th className="whitespace-nowrap px-4 py-3 text-center font-semibold">
-                FGA
+                FGM
               </th>
               <th className="whitespace-nowrap px-4 py-3 text-center font-semibold">
-                FGM
+                FGA
               </th>
               <th className="whitespace-nowrap px-4 py-3 text-center font-semibold">
                 FG%
               </th>
               <th className="whitespace-nowrap px-4 py-3 text-center font-semibold">
-                3PA
+                3PM
               </th>
               <th className="whitespace-nowrap px-4 py-3 text-center font-semibold">
-                3PM
+                3PA
               </th>
               <th className="whitespace-nowrap px-4 py-3 text-center font-semibold">
                 3P%
               </th>
               <th className="whitespace-nowrap px-4 py-3 text-center font-semibold">
-                FTA
+                FTM
               </th>
               <th className="whitespace-nowrap px-4 py-3 text-center font-semibold">
-                FTM
+                FTA
               </th>
               <th className="whitespace-nowrap px-4 py-3 text-center font-semibold">
                 FT%
@@ -170,11 +173,11 @@ function Table({ selectedPlayer, name }) {
                 </td>
 
                 <td className="px-4 py-3 text-center">
-                  {stats.FGA.toLocaleString('en-CA',{minimumFractionDigits: 1})}
+                  {stats.FGM.toLocaleString('en-CA',{minimumFractionDigits: 1})}
                 </td>
 
                 <td className="px-4 py-3 text-center">
-                  {stats.FGM.toLocaleString('en-CA',{minimumFractionDigits: 1})}
+                  {stats.FGA.toLocaleString('en-CA',{minimumFractionDigits: 1})}
                 </td>
 
                 <td className="px-4 py-3 text-center">
@@ -182,11 +185,11 @@ function Table({ selectedPlayer, name }) {
                 </td>
 
                 <td className="px-4 py-3 text-center">
-                  {stats.FG3A.toLocaleString('en-CA',{minimumFractionDigits: 1})}
+                  {stats.FG3M.toLocaleString('en-CA',{minimumFractionDigits: 1})}
                 </td>
 
                 <td className="px-4 py-3 text-center">
-                  {stats.FG3M.toLocaleString('en-CA',{minimumFractionDigits: 1})}
+                  {stats.FG3A.toLocaleString('en-CA',{minimumFractionDigits: 1})}
                 </td>
 
                 <td className="px-4 py-3 text-center">
@@ -194,11 +197,11 @@ function Table({ selectedPlayer, name }) {
                 </td>
 
                 <td className="px-4 py-3 text-center">
-                  {stats.FTA.toLocaleString('en-CA',{minimumFractionDigits: 1})}
-                </td>
-
-                <td className="px-4 py-3 text-center">
                   {stats.FTM.toLocaleString('en-CA',{minimumFractionDigits: 1})}
+                </td>
+                
+                <td className="px-4 py-3 text-center">
+                  {stats.FTA.toLocaleString('en-CA',{minimumFractionDigits: 1})}
                 </td>
 
                 <td className="px-4 py-3 text-center">

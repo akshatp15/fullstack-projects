@@ -1,4 +1,5 @@
-function PlayerSearch(props) {
+function Search(props) {
+  // Props passed to the search bar
   const {
     players,
     search,
@@ -6,6 +7,7 @@ function PlayerSearch(props) {
     setSelectedPlayer
   } = props
 
+  // List that contains filtered players based on the users search
   const filteredPlayers = Object.entries(players).filter(
     ([id, name]) =>
       name.toLowerCase().includes(search.toLowerCase())
@@ -47,4 +49,4 @@ function PlayerSearch(props) {
   )
 }
 
-export default PlayerSearch
+export default Search

@@ -1,6 +1,7 @@
-import PlayerSearch from './Search'
+import Search from './Search'
 
 function Header(props) {
+  // Props passed to Header component
   const {
     players,
     search,
@@ -20,7 +21,7 @@ function Header(props) {
         </button>
 
         <div className="w-full max-w-md md:max-w-xl lg:max-w-2xl">
-          <PlayerSearch
+          <Search
             players={players}
             search={search}
             setSearch={setSearch}

@@ -1,6 +1,7 @@
 from nba_api.stats.endpoints import playercareerstats
 import pandas
 
+# Returns a clean version of the regular season stats for a given player
 def get_regular(player_id):
     career = playercareerstats.PlayerCareerStats(player_id,"PerGame")
     # Regular Season Stats
@@ -9,6 +10,7 @@ def get_regular(player_id):
     reg= reg.to_dict(orient="records")
     return reg
 
+# Returns a clean version of the playoffs stats for a given player
 def get_playoffs(player_id):
     career = playercareerstats.PlayerCareerStats(player_id,"PerGame")
     playoffs = career.get_data_frames()[2]
