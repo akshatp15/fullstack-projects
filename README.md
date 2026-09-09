@@ -20,4 +20,11 @@ To be able to run the programs in this repository you will need to download Node
     - Backend: Express.js and MongoDB
   - The instructions on setting up the database and rate limiter and how to run the project are in the README file located inside the quick_note
     directory
-  - quick_note repository: [quick_note](https://github.com/akshatp15/fullstack-projects/tree/main/quick_note)    
+  - quick_note repository: [quick_note](https://github.com/akshatp15/fullstack-projects/tree/main/quick_note)
+### StatSheet
+  - This project is a full stack stats NBA stats webpage that shows all active players career stats.
+  - Tech Stack
+    - Frontend: React.js and Tailwind CSS
+    - Backend: FastAPI and NBA api
+  - The instructions on how to run the project are in the README file located inside the stat_sheet directory
+  - quick_note repository: [stat_sheet](https://github.com/akshatp15/fullstack-projects/tree/main/stat_sheet)    
