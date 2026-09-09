@@ -27,4 +27,4 @@ To be able to run the programs in this repository you will need to download Node
     - Frontend: React.js and Tailwind CSS
     - Backend: FastAPI and NBA api
   - The instructions on how to run the project are in the README file located inside the stat_sheet directory
-  - quick_note repository: [stat_sheet](https://github.com/akshatp15/fullstack-projects/tree/main/stat_sheet)    
+  - stat_sheet repository: [stat_sheet](https://github.com/akshatp15/fullstack-projects/tree/main/stat_sheet)    
