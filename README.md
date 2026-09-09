@@ -22,7 +22,7 @@ To be able to run the programs in this repository you will need to download Node
     directory
   - quick_note repository: [quick_note](https://github.com/akshatp15/fullstack-projects/tree/main/quick_note)
 ### StatSheet
-  - This project is a full stack stats NBA stats webpage that shows all active players career stats.
+  - This project is a full stack NBA stats webpage that shows career stats for all active players.
   - Tech Stack
     - Frontend: React.js and Tailwind CSS
     - Backend: FastAPI and NBA api
